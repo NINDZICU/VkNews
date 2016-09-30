@@ -153,20 +153,10 @@ public class NewsActivity extends AppCompatActivity {
         }
         public ImageView getImage(NewsViewHolder holder, int count){
             ImageView image = null;
-            switch (count){
-                case(1):
-                   image= holder.getImage_1();
-                    break;
-                case(2):
-                   image= holder.getImage_2();
-                    break;
-                case(3):
-                    image= holder.getImage_3();
-                    break;
-                 case(4):
-                    image= holder.getImage_4();
-                    break;
-            }
+            if(count==1) image= holder.getImage_1();
+            if(count==2) image= holder.getImage_2();
+            if(count==3) image= holder.getImage_3();
+            if(count==4) image= holder.getImage_4();
             return image;
         }
 
@@ -228,12 +218,9 @@ public class NewsActivity extends AppCompatActivity {
             return content_image_3;
         }
         public ImageView getImage_4(){return content_image_4;}
-        public void dropImage_1(){content_image_1.setVisibility(View.GONE);
-        }
-        public void dropImage_2(){content_image_2.setVisibility(View.GONE);
-            }
-        public void dropImage_3(){content_image_3.setVisibility(View.GONE);
-            }
+        public void dropImage_1(){content_image_1.setVisibility(View.GONE);}
+        public void dropImage_2(){content_image_2.setVisibility(View.GONE);}
+        public void dropImage_3(){content_image_3.setVisibility(View.GONE);}
         public void dropImage_4(){content_image_3.setVisibility(View.GONE);}
 
 
